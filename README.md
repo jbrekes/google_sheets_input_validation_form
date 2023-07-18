@@ -55,6 +55,36 @@ Resets data validations for specific ranges in the 'Input' sheet to their defaul
 
 Resets the entire 'Input' sheet by calling `resetValidations()` and removing all cell background colors while preserving the font style and size.
 
+## How it Looks
+
+The code operates on a spreadsheet like the one shown in the image. This template has built-in validations, but the word "testing" was copied and pasted into cells that, in theory, should reject this type of input.
+
+<p align="center">
+<img src="images/initial.png" alt="Initial Test">
+</p>
+
+When the "Validate" button is pressed:
+
+1. The same validation rules will be executed, even if they have been overwritten, and an automatic message will be generated indicating the errors.
+2.  Cells with errors will be colored in the spreadsheet.
+3.   All the validation rules that have been overwritten will be restored.
+
+This also happens if we press the "Download" button, since the data will only be allowed to be downloaded if there are no errors in the table.
+
+<p align="center">
+<img src="images/errors1.png" alt="Errors">
+</p>
+
+<p align="center">
+<img src="images/errors2.png" alt="Errors2">
+</p>
+
+In case all the validation rules have been approved, the download of the data in .csv format will be allowed.
+
+<p align="center">
+<img src="images/download.png" alt="Download">
+</p>
+
 ## How to Use
 
 1. Copy the provided Google Apps Script code to your Google Sheets.
